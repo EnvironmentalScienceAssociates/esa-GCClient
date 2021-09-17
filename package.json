@@ -1,0 +1,19 @@
+{
+  "name": "esagcclient",
+  "version": "1.0.0",
+  "description": "A client that connects to generic API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EnvironmentalScienceAssociates/esa-GCClient.git"
+  },
+  "author": "Peter Ross <pross@esassoc.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EnvironmentalScienceAssociates/esa-GCClient/issues"
+  },
+  "homepage": "https://github.com/EnvironmentalScienceAssociates/esa-GCClient#readme"
+}
