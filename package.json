@@ -1,6 +1,6 @@
 {
-  "name": "esagcclient",
-  "version": "1.0.0",
+  "name": "esa-gcclient",
+  "version": "1.0.12",
   "description": "A client that connects to generic API",
   "main": "index.js",
   "scripts": {
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/EnvironmentalScienceAssociates/esa-GCClient/issues"
   },
-  "homepage": "https://github.com/EnvironmentalScienceAssociates/esa-GCClient#readme"
+  "homepage": "https://github.com/EnvironmentalScienceAssociates/esa-GCClient#readme",
+  "dependencies": {
+    "axios": "^0.21.4"
+  }
 }
