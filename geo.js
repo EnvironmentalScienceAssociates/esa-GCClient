@@ -18,3 +18,30 @@ export function calcDistance(lat1, lon1, lat2, lon2)
     {
         return Value * Math.PI / 180;
     }
+
+
+    //converts and object containing "_latitude and _longitude" into geoJSON feature
+  export function ConvertToGeoJSON(item){
+
+      var ret = {
+        type: "Feature",
+        properties: {},
+        geometry: {
+          type: "Point",
+          coordinates: [
+             parseFloat(item._longitude), parseFloat(item._latitude) 
+          ]
+        }
+      }
+
+      return ret;
+  }
+
+  export function ConvertDataToGeoJSON(data){
+    var features = [];
+    data.map(item=>{
+      features.push(ConvertToGeoJSON(item))
+    })
+    var ret = {"type":"FeatureCollection","features":features};
+    return ret;
+  }

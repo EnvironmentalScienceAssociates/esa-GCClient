@@ -1,6 +1,6 @@
 {
   "name": "esa-gcclient",
-  "version": "1.0.12",
+  "version": "1.0.24",
   "description": "A client that connects to generic API",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/EnvironmentalScienceAssociates/esa-GCClient#readme",
   "dependencies": {
+    "@nivo/circle-packing": "^0.74.0",
     "axios": "^0.21.4"
   }
 }

@@ -1,15 +1,4 @@
 
-        //Generated Client Code -- do not modify
-
-        /* REQUIREMENTS
-
-        libaries -
-            axios
-
-        config
-            src/config.GEN-API-URL
-        
-        */
             import axios from 'axios'
             import {GEN_API_URL} from '../../src/config'
     //const GEN_API_URL = "http://localhost:4000"
@@ -27,7 +16,10 @@
                 var result = await axios.post(GEN_API_URL+'/data/', queryObject);
                 return result;
             }
-    
+            export async function getDataByObj(obj){
+                var result = await axios.post(GEN_API_URL+'/data/',obj)
+                return result.data;
+            }
       export async function getXGridData(table,query,includeChildren){
           //this pulls and preps the schema too
           var result = await axios.get(GEN_API_URL+'/API/' + table + '/schema');
@@ -54,7 +46,18 @@
             // pass any object to the database and it will save
             // dataObject must match a schema AND INCLUDE tableName property
          export   const saveData = async (dataObject)=>{
-                var result = await axios.post(GEN_API_URL+'/data/save')
+             console.log("Saving data", dataObject) 
+
+             
+                var result = await axios.post(GEN_API_URL+'/data/save', dataObject)
+            }
+
+            //Same as saveData however this is used when primary key is not known. Object must have id that references the primary key field
+            export const blindSave = async (dataObject)=>{
+                var result = await axios.post(GEN_API_URL+'/data/blindSave', dataObject)
+
+                return result;
+
             }
     
             export  const saveRecords = async(dataObjects)=>{
@@ -118,7 +121,7 @@
     saveData,
     saveRecords,
     validateObject,
-    getData
+    getData,getDataByObj
   }
 
   export default Client;
