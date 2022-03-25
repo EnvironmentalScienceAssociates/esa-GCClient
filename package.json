@@ -1,6 +1,6 @@
 {
   "name": "esa-gcclient",
-  "version": "1.0.33",
+  "version": "1.0.34",
   "description": "A client that connects to generic API",
   "main": "index.js",
   "scripts": {

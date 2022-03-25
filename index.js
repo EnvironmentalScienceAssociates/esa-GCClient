@@ -56,7 +56,7 @@ export const blindSave = async (dataObject) => {
 };
 
 export const deleteDBObject = async(dataObject)=>{
-  var result = await axios.delete(GEN_API_URL + '/data/delete', dataObject);
+  var result = await axios.delete(GEN_API_URL + '/data/delete', {headers:{}, data: dataObject});
   return result;
 }
 
